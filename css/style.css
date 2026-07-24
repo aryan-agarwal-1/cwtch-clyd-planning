@@ -1,0 +1,490 @@
+/* ===========================
+   Cwtch Clyd Care Home
+   Planning Proposal Page Styles
+   =========================== */
+
+:root {
+  --color-primary: #CC8B86;      /* dusty rose */
+  --color-primary-dark: #7D4F50; /* deep maroon - used sparingly (headings, footer, hover) */
+  --color-accent: #CC8B86;       /* dusty rose accent buttons */
+  --color-accent-dark: #7D4F50;  /* maroon on hover only */
+  --color-bg: #FFFFFF;
+  --color-bg-alt: #F9EAE1;       /* pale cream/blush */
+  --color-text: #4A3A38;
+  --color-text-muted: #8A7570;
+  --color-border: #F0D9D3;
+  --radius: 10px;
+  --max-width: 1140px;
+  --font-body: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-heading: Georgia, "Times New Roman", serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.narrow {
+  max-width: 780px;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.9rem;
+  margin-bottom: 1.2rem;
+}
+
+a { color: var(--color-primary); }
+
+.fine-print {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.required { color: var(--color-accent); }
+
+/* ---------- Header ---------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  background: var(--color-bg-alt);
+  border-bottom: 1px solid var(--color-border);
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.main-nav {
+  display: flex;
+  gap: 28px;
+}
+
+.main-nav a {
+  color: var(--color-primary-dark);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.main-nav a:hover {
+  color: var(--color-primary);
+}
+
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background: #fff;
+  border: 1px solid var(--color-primary);
+  border-radius: 999px;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.lang-toggle .lang-option {
+  padding: 5px 12px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  border-radius: 999px;
+  color: var(--color-primary-dark);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.lang-toggle .lang-option.is-active {
+  background: var(--color-primary-dark);
+  color: #fff;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.nav-toggle span {
+  width: 24px;
+  height: 2px;
+  background: var(--color-primary-dark);
+  display: block;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  background: var(--color-primary-dark);
+  color: #fff;
+  padding: 70px 0;
+  text-align: center;
+}
+
+.hero-inner {
+  max-width: 760px;
+}
+
+.hero-logo {
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  margin: 0 auto 2rem;
+  display: block;
+}
+
+.hero-location {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 1.2rem;
+}
+
+.hero-lede {
+  font-size: 1.05rem;
+  color: var(--color-bg-alt);
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--color-accent-dark);
+}
+
+/* ---------- Sections ---------- */
+
+.section {
+  padding: 70px 0;
+}
+
+.section.alt {
+  background: var(--color-bg-alt);
+}
+
+/* ---------- About / Site Photo ---------- */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 40px;
+  align-items: stretch;
+}
+
+.about-image-track {
+  display: flex;
+  align-items: center;
+}
+
+.about-image {
+  width: 100%;
+  transform: translateY(-24px);
+}
+
+.site-photo {
+  margin: 0;
+}
+
+.site-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  display: block;
+}
+
+.site-photo figcaption {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image-track {
+    order: -1;
+  }
+}
+
+.contact-methods {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.contact-methods li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* ---------- Key Facts ---------- */
+
+.facts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.fact-card {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fact-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+}
+
+.fact-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+/* ---------- Documents ---------- */
+
+.documents-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 18px;
+  margin: 1.5rem 0;
+}
+
+.doc-card {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-decoration: none;
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.doc-card:hover {
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+.doc-icon {
+  font-size: 1.6rem;
+}
+
+.doc-name {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.doc-action {
+  font-size: 0.85rem;
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+/* ---------- Form ---------- */
+
+.comment-form {
+  margin-top: 1.5rem;
+}
+
+.form-row {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-row label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.form-row input,
+.form-row textarea {
+  padding: 12px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  background: var(--color-primary-dark);
+  color: var(--color-bg-alt);
+  padding: 50px 0 20px;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.footer-inner p {
+  margin: 0 0 6px;
+}
+
+.footer-title {
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.footer-logo {
+  height: 28px;
+  width: auto;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.site-footer a {
+  color: #fff;
+}
+
+.footer-consultant {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.consultant-logo-badge {
+  background: var(--color-bg-alt);
+  border-radius: var(--radius);
+  padding: 8px 10px;
+  display: inline-flex;
+}
+
+.consultant-logo {
+  height: 120px;
+  width: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.copyright {
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 16px;
+  font-size: 0.85rem;
+  color: var(--color-bg-alt);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 780px) {
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-bg-alt);
+    flex-direction: column;
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--color-border);
+    display: none;
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .header-right {
+    gap: 12px;
+  }
+
+  .logo img {
+    height: 28px;
+  }
+
+  .lang-toggle .lang-option {
+    padding: 4px 8px;
+    font-size: 0.7rem;
+  }
+
+  .hero-logo {
+    max-width: 240px;
+  }
+}
